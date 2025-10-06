@@ -1,39 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestión</title>
-    <link rel="stylesheet" href="./css/styles.css">
+    <title>Portafolio - Ingeniero Multimedia</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Gestión</a></li>
-            <li><a href="catalog.html">Catálogo</a></li>
-        </ul>
-    </nav>
 
-    <h1>Gestión de Items</h1>
+    <header>
+        <div class="container">
+            <h1>Edwin Alexander Hernández</h1>
+            <p class="tagline">Ingenier Multimedia | Diseño, Desarrollo & Creatividad Digital</p>
+        </div>
+    </header>
 
-    <form id="itemForm">
-        <input type="text" id="name" placeholder="Nombre del item" required>
-        <input type="text" id="description" placeholder="Descripción">
-        <button type="submit" id="submitBtn">Agregar</button>
-    </form>
+    <div class="container">
+      
+        <section class="sobremi">
+            <h2>Sobre mí</h2>
+            <p>
+                Soy Ingeniero en Multimedia con pasión por el diseño interactivo, el desarrollo web y la creación de
+                experiencias digitales que combinan tecnología, arte y comunicación. Me interesa integrar herramientas
+                de programación, animación y diseño audiovisual para construir soluciones innovadoras, funcionales y
+                visualmente atractivas.
+            </p>
+        </section>
 
-    <table>
-        <thead>
-            <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Descripción</th>
-            <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody id="itemsTable"></tbody>
-    </table>
+        <!-- Proyectos -->
+        <section class="projects">
+            <h2>Proyectos Destacados</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="imagen-div">
+                        <img src="https://i.blogs.es/b6b656/canon/450_1000.jpg" alt="camara">
+                    </div>
+                    <div class="project-info">
+                        <h3>Video Interactivo 360°</h3>
+                        <p>Experiencia inmersiva en realidad virtual para el lanzamiento de producto. 
+                           Integración de hotspots interactivos y narrativa no lineal.</p>
+                    </div>
+                </div>
 
-    <script type="module" src="./js/main.js"></script>
+                <div class="project-card">
+                    <div class="imagen-div">
+                        <img src="https://img.freepik.com/vector-gratis/proceso-diseno-pagina-aterrizaje-conceptual_52683-25517.jpg?semt=ais_hybrid&w=740&q=80" alt="diseño">
+                    </div>
+                    <div class="project-info">
+                        <h3>Branding & Motion Graphics</h3>
+                        <p>Identidad visual completa y animaciones para startup tecnológica. 
+                           Desde logo hasta sistema de diseño animado para redes sociales.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="imagen-div">
+                        <img src="https://programacionymas.com/images/tutoriales/desarrollo-web/desarrollo-web.png" alt="desarrolloweb">
+                    </div>
+                    <div class="project-info">
+                        <h3>Aplicación Web Interactiva</h3>
+                        <p>Plataforma educativa con gamificación e interfaces dinámicas. 
+                           Desarrollo full-stack con React y Node.js, incluyendo sistema de logros.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section class="contact">
+            <h2>Contacto</h2>
+            <form class="contact-form" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Enviar Mensaje</button>
+            </form>
+
+            <div class="social-links">
+                <a href="#" title="LinkedIn">in</a>
+                <a href="#" title="GitHub">🐙</a>
+                <a href="#" title="Instagram">📷</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <h2>Creditos</h2>
+            <p> 2025 Edwin Alexander Hernandez - Ingeniero de Multimedia</p>
+            <p>Universidad de Boyacá</p>
+            <p>Taller de diseño</p>
+            <p>Diseñado y desarrollado</p>
+            <a href="#">Linkedin</a>
+        </div>
+    </footer>
+
+
 </body>
+<script  src="./js/main.js"></script>
+
 </html>
